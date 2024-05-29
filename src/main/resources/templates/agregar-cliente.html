@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Agregar Paquete</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100">
+
+	<nav class="bg-blue-500 p-6">
+		<div class="container mx-auto flex items-center justify-between">
+			<div class="flex items-center flex-shrink-0 text-white mr-6">
+				<img src="../images/logo.png" alt="Logo" class="h-20 w-8 mr-2">
+				<span class="font-semibold text-xl tracking-tight">Agregar Paquete</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container mx-auto mt-10">
+		<form action="/paquetes/crear" method="post" class="max-w-lg mx-auto bg-white p-6 rounded-md shadow-md">
+			<div class="mb-4">
+				<label for="descripcion" class="block text-gray-700 font-bold mb-2">Descripción:</label>
+				<input type="text" id="descripcion" name="descripcion" required
+					class="border-2 border-gray-400 rounded-md w-full px-3 py-2">
+			</div>
+			<div class="mb-4">
+				<label for="destino" class="block text-gray-700 font-bold mb-2">Destino:</label>
+				<input type="text" id="destino" name="destino" required
+					class="border-2 border-gray-400 rounded-md w-full px-3 py-2">
+			</div>
+			<div class="mb-4">
+				<label for="estado" class="block text-gray-700 font-bold mb-2">Estado:</label>
+				<input type="text" id="estado" name="estado" required
+					class="border-2 border-gray-400 rounded-md w-full px-3 py-2">
+			</div>
+			<button type="submit"
+				class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105">Guardar
+				Paquete</button>
+		</form>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gestión de Paquetes</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100">
+
+	<nav class="bg-blue-500 p-6">
+		<div class="container mx-auto flex items-center justify-between">
+			<div class="flex items-center flex-shrink-0 text-white mr-6">
+				<img src="../images/logo.png" alt="Logo" class="h-20 w-8 mr-2">
+				<span class="font-semibold text-xl tracking-tight">Gestión de Paquetes</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container mx-auto mt-10 flex justify-center">
+		<a href="/agregar-paquete"
+			class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+			Agregar Paquete
+		</a>
+	</div>
+
+	<!-- Aquí se mostrará la lista de paquetes -->
+	<div class="container mx-auto mt-10">
+		<table class="min-w-full bg-white rounded-lg overflow-hidden">
+			<thead class="bg-blue-500 text-white">
+				<tr>
+					<th class="py-3 px-6 text-left">Descripción</th>
+					<th class="py-3 px-6 text-left">Destino</th>
+					<th class="py-3 px-6 text-left">Estado</th>
+					<th class="py-3 px-6 text-center">Acciones</th>
+				</tr>
+			</thead>
+			<tbody class="divide-y divide-gray-200">
+				<!-- Iteración sobre la lista de paquetes -->
+				<tr th:each="paquete : ${paquetes}">
+					<td class="py-4 px-6" th:text="${paquete.descripcion}">Descripción del paquete</td>
+					<td class="py-4 px-6" th:text="${paquete.destino}">Destino del paquete</td>
+					<td class="py-4 px-6" th:text="${paquete.estado}">Estado del paquete</td>
+					<td class="py-4 px-6 text-center">
+						<!-- Botones de acciones para cada paquete -->
+						<a th:href="@{/editar-paquete/{id}(id=${paquete.id})}"
+							class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-full shadow-md mr-2 transition duration-300 ease-in-out transform hover:scale-105">
+							Editar
+						</a>
+						<a th:href="@{/eliminar-paquete/{id}(id=${paquete.id})}"
+							class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full shadow-md mr-2 transition duration-300 ease-in-out transform hover:scale-105">
+							Eliminar
+						</a>
+					</td>
+				</tr>
+				<!-- Fin de la iteración -->
+			</tbody>
+		</table>
+	</div>
+
+
+</body>
+
+</html>

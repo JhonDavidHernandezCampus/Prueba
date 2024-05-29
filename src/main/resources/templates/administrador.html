@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Servientrega</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="bg-blue-500 p-6">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <img src="../images/logo.png" alt="Logo" class="h-20 w-8 mr-2">
+                <span class="font-semibold text-xl tracking-tight">Administrador</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-10 flex justify-center">
+        <div class="grid grid-cols-2 gap-4">
+            <a href="/gestion-paquetes"
+                class="bg-green-500 hover:bg-green-600 text-white font-bold py-6 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                <div class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                    <p class="text-lg">Gestionar Paquetes</p>
+                </div>
+            </a>
+            <a href="/gestion-clientes"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-6 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                <div class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                    </svg>
+                    <p class="text-lg">Gestionar Clientes</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
